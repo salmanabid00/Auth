@@ -76,3 +76,33 @@ body {
 #registerForm a:hover {
     text-decoration: underline;
 }
+
+  .error-msg {
+      color: #e74c3c;
+      font-size: 12px;
+      margin-top: -8px;
+      margin-bottom: 6px;
+      display: none;
+    }
+    .success-msg {
+      color: #27ae60;
+      font-size: 12px;
+      margin-top: -8px;
+      margin-bottom: 6px;
+      display: none;
+    }
+    input.invalid {
+      border: 1.5px solid #e74c3c !important;
+    }
+    input.valid {
+      border: 1.5px solid #27ae60 !important;
+    }
+    .password-strength {
+      font-size: 12px;
+      margin-top: -8px;
+      margin-bottom: 6px;
+      display: none;
+    }
+    .strength-weak   { color: #e74c3c; }
+    .strength-medium { color: #f39c12; }
+    .strength-strong { color: #27ae60; }

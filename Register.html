@@ -4,17 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Register Form</title>
-<link rel="stylesheet" href="Register.css">
+  <link rel="stylesheet" href="Register.css">
 </head>
 <body>
-  <form id="registerForm">
+  <form id="registerForm" novalidate>
     <h2>Register</h2>
-    <input type="text" placeholder="Name" id="name" required>
-    <input type="text" placeholder="username" id="username" required>
+
+    <input type="text" placeholder="Full Name" id="name" required>
+    <span class="error-msg" id="nameError">Name must be at least 3 characters.</span>
+    <input type="email" placeholder="Email" id="email" required>
+    <span class="error-msg" id="emailError">Please enter a valid email address.</span>
+
+    <input type="text" placeholder="Username" id="username" required>
+    <span class="error-msg" id="usernameError">Username: 4–20 chars, letters/numbers/underscores only.</span>
+
     <input type="password" placeholder="Password" id="password" required>
+    <span class="password-strength" id="passwordStrength"></span>
+    <span class="error-msg" id="passwordError"> Password must be 8+ chars with uppercase, lowercase, number & special character.
+    </span>
+
     <input type="password" placeholder="Confirm Password" id="confirmPassword" required>
+    <span class="error-msg" id="confirmError">Passwords do not match.</span>
+
     <button type="submit">Register</button>
-    <a href="login.html">Go to Login</a>
+    <a href="login.html">Already have an account? Login</a>
   </form>
 
   <script src="register.js"></script>
